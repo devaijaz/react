@@ -1,0 +1,58 @@
+{
+  "name": "@devaijaz/react-library",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/devaijaz"
+  },
+  "version": "0.0.1",
+  "description": "React Components",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "private": false,
+  "scripts": {
+    "build": "npm run clean && npm run format && tsc && rollup -c",
+    "tsc": "npm run clean && tsc",
+    "clean": "rimraf dist",
+    "format": "prettier --write src/",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "keywords": [],
+  "author": "devaijaz",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.18.10",
+    "@rollup/plugin-commonjs": "^22.0.2",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-typescript": "^8.3.4",
+    "@storybook/addon-actions": "^6.5.10",
+    "@storybook/addon-essentials": "^6.5.10",
+    "@storybook/addon-interactions": "^6.5.10",
+    "@storybook/addon-links": "^6.5.10",
+    "@storybook/builder-webpack5": "^6.5.10",
+    "@storybook/manager-webpack5": "^6.5.10",
+    "@storybook/react": "^6.5.10",
+    "@storybook/testing-library": "^0.0.13",
+    "@types/node": "^18.7.6",
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "babel-loader": "^8.2.5",
+    "prettier": "^2.7.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.78.0",
+    "rollup-plugin-dts": "^4.2.2",
+    "rollup-plugin-typescript2": "^0.32.1",
+    "tslib": "^2.4.0",
+    "typescript": "^4.7.4"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts",
+  "dependencies": {}
+}
