@@ -2,6 +2,7 @@ import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
 import dts from "rollup-plugin-dts";
+import postcss from "rollup-plugin-postcss";
 import * as path from "path";
 
 const packageJson = require("./package.json");
@@ -28,6 +29,7 @@ export default [
         exclude: [/\.stories.((js|jsx|ts|tsx|mdx))$/],
         tsconfig: path.resolve(__dirname, "./tsconfig.json"),
       }),
+      postcss(),
     ],
   },
   {
